@@ -1,0 +1,20 @@
+name: Node.js CI - Pull Request
+
+on: [pull_request]
+
+jobs:
+    check-versions:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [22.11.0]
+
+        steps:
+            - uses: actions/checkout@v4
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  registry-url: "https://registry.npmjs.org"
+            - run: npx -y @that-one-tool/multi-version validate
