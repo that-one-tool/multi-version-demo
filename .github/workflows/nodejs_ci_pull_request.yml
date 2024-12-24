@@ -17,4 +17,4 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   registry-url: "https://registry.npmjs.org"
-            - run: npx -y @that-one-tool/multi-version validate
+            - run: npx -y -p @that-one-tool/multi-version@latest multi-version validate
