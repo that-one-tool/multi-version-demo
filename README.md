@@ -4,7 +4,7 @@ This is demo for usage of multi-version package in a monorepo.
 
 ## GitHub actions
 
-- Validation: See action `` for details on how multi-version is used to validate versioning in CI/CD pipeline
+- Validation: See action `nodejs_ci_pull_request.yml` for details on how multi-version is used to validate versioning in CI/CD pipeline
 
 ## Monorepo demo
 
